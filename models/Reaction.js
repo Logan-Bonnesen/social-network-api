@@ -19,6 +19,12 @@ const reactionSchema = new Schema({
     default: Date.now,
     // getter to format the timestamp to human readable
   },
+},
+  {
+
+    toJSON: { getters: true},
+    id: false
+  
 });
 
 module.exports = reactionSchema;
